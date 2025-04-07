@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f6f7fb;
+}
+
+.container {
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result_images {
+    display: flex;
+    column-gap: 7rem;
+}
+
+.result_images img {
+    width: 100px;
+}
+
+.result {
+    font-size: 2rem;
+    color: #AB9458;
+    margin-top: 1.5rem;
+}
+
+.container.start .user_result {
+    transform-origin: left;
+    animation: userShake 0.5s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .cpu_result {
+    transform-origin: right;
+    animation: userShake 0.5s ease infinite;
+}
+
+@keyframes cpuShake {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+.cpu_result img {
+    transform: rotateY(-180deg);
+}
+
+.option_images {
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+.option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.option_image.active {
+    opacity: 1;
+}
+
+.option_image img {
+    width: 70px;
+    pointer-events: none;
+}
+
+.option_image p {
+    color: #AB9458;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+
+.restart-btn {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #AB9458;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.restart-btn:hover {
+    background: #8c7942;
+}
